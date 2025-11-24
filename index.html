@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="One-to-All Animation">
+    <meta property="og:title" content="One-to-All Animation"/>
+    <meta property="og:description"
+          content="One-to-All Animation: Alignment-Free
+Character Animation and Image Pose Transfer"/>
+    <meta property="og:url" content="URL OF THE WEBSITE"/>
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta property="og:image" content="static/image/video_t1.png"/>
+    <meta property="og:image:width" content="2412"/>
+    <meta property="og:image:height" content="1394"/>
+
+
+    <meta name="twitter:title" content="One-to-All Animation">
+    <meta name="twitter:description"
+          content="One-to-All Animation: Alignment-Free
+Character Animation and Image Pose Transfer">
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <meta name="twitter:image" content="static/images/video_t1.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Keywords for your paper to be indexed by-->
+    <meta name="keywords" content="Image-to-Video">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>One-to-All Animation</title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+</head>
+
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+</nav>
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+
+                    <h1 class="title is-1 publication-title scroll-animate">One-to-All Animation: Alignment-Free <br> Character 
+                        Animation and Image Pose Transfer</h1>
+
+
+                    <div class="column has-text-centered">
+                        <div class="publication-links scroll-animate">
+                            <span class="link-block">
+                                <a href="" target="_blank"
+                                   class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                        <i class="ai ai-arxiv"></i>
+                                    </span>
+                                    <span>Paper</span>
+                                </a>
+                            </span>
+                            <span class="link-block">
+                                <a href="https://github.com/ssj9596/One-to-All-Animation" target="_blank"
+                                   class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                    <span>GitHub</span>
+                                </a>
+                            </span>
+                            <span class="link-block">
+                                <a href="https://huggingface.co/datasets/MochunniaN1/One-to-All-sub" target="_blank"
+                                   class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                        🤗
+                                    </span>
+                                    <span>HF Dataset</span>
+                                </a>
+                            </span>
+                        </div>
+                        <div class="publication-links scroll-animate">
+                            <span class="link-block">
+                                <a href="https://huggingface.co/MochunniaN1/One-to-All-1.3b_2" target="_blank"
+                                   class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                        🤗
+                                    </span>
+                                    <span>HF Model 1.3B</span>
+                                </a>
+                            </span>
+                            <span class="link-block">
+                                <a href="https://huggingface.co/MochunniaN1/One-to-All-14b" target="_blank"
+                                   class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                        🤗
+                                    </span>
+                                    <span>HF Model 14B</span>
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Teaser video-->
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container is-max-desktop is-centered">
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <img src="content/overview.jpg" alt="MY ALT TEXT" style="width: 80%; height: 80%;"/>
+            </div>
+            <div class="item">
+                <h2 class="content has-text-justified">
+                    <p style="width: 80%; margin: 0 auto;">
+                        We introduce One-to-All Animation, a unified framework for pose-driven personalized generation. Unlike prior methods that require both spatially-aligned references and pose retargeting, our framework supports: 
+(1) cross-scale video animation with either retargeted or original driving motion,
+(2) cross-scale image pose transfer, and
+(3) temporally coherent long video generation.
+                    </p>
+                </h2>
+            </div>
+</section>
+
+<!-- End teaser video -->
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Abstract</h2>
+
+                <div class="content has-text-justified">
+                    <p style="font-size: 1.2em;">
+                        Recent advances in diffusion models have greatly improved pose-driven character animation.
+    However, existing methods are limited to spatially aligned reference-pose pairs with matched skeletal structures. Handling reference-pose misalignment remains unsolved.
+    To address this, we present One-to-All Animation, a unified framework for high-fidelity character animation and image pose transfer for references with arbitrary layouts.
+    First, to handle spatially misaligned reference, we reformulate training as a self-supervised outpainting task that transforms diverse-layout reference into a unified occluded-input format. Second, to process partially visible reference, we design a reference extractor for comprehensive identity feature extraction. Further, we integrate hybrid reference fusion attention to handle varying resolutions and dynamic sequence lengths. Finally, from the perspective of generation quality, we introduce identity-robust pose control that decouples appearance from skeletal structure to mitigate pose overfitting, and a token replace strategy for coherent long-video generation. Extensive experiments show that our method outperforms existing approaches. The code and model will be available at <a href="https://github.com/ssj9596/One-to-All-Animation" target="_blank" style="color: #ff1493; text-decoration: none;">https://github.com/ssj9596/One-to-All-Animation</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Method -->
+<section class="hero is-small">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <h2 class="title is-2">Method</h2>
+            <div style="display: flex; justify-content: center; align-items: center;">
+                <img src="content/framework.jpg" alt="MY ALT TEXT" style="width: 70%; height: 70%;"/>
+            </div>
+            <div class="item">
+                <h2 class="content has-text-justified">
+                    <p style="font-size: 1.2em; width: 90%; margin: 0 auto;">
+                        Overview of the proposed framework. We introduce outpainting preprocess to handle diverse body proportions through face-centered random masking during training and pose-guided translation at inference. The driving poses are encoded and refined via reference-guided pose control to preserve facial identity despite skeletal mismatch. Reference features are progressively injected through hybrid reference fusion attention, supporting variable resolutions and dynamic sequence lengths.
+                    </p>
+                </h2>
+            </div>
+</section>
+<!-- End Method -->
+
+
+<style>
+    .gifImage:hover {
+        opacity: 0.8;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        transform: scale(1.1);
+    }
+
+    .paused {
+        animation-play-state: paused;
+    }
+
+</style>
+
+
+<head>
+    <title>place gif</title>
+    <style>
+        .gif-container {
+            display: flex;
+        }
+
+        .gif {
+            width: 660px; /* 设置 GIF 的宽度 */
+            height: 400px; /* 设置 GIF 的高度 */
+        }
+    </style>
+</head>
+
+
+<section class="hero is-small is-light">
+    <div class="hero-body">
+        <div class="container">
+            <h2 class="title is-3">Generated Videos</h2>
+            <br></br>
+<!--            <h3 class="title is-3">Singing</h3>-->
+            <h2 class="content has-text-justified">
+                <p style="font-size: 1.4em;"></p>
+            </h2>
+
+
+            <style>
+                .video-item {
+                    margin: 0px 0!important;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .video-item column {
+                    width: 48%; /* 各占一半，留下一些间隔 */
+                    object-fit: cover; /* 保持图片纵横比 */
+                    margin: 0 10px;
+                }
+
+
+                .item-gif-container {
+                    width: 48%; /* 占据父元素的80%宽度 */
+                    margin: auto; /* 水平方向上创建相同的空白 */
+                }
+            </style>
+
+            <style>
+                .video-container {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    /*margin: 0 10px;*/
+                    width: 100%;
+                }
+
+                .description {
+                    font-size: 1.2em;
+                    text-align: justify;
+                }
+
+                .content-description {
+                    margin-top: 10px; /* Add some space above the description */
+                }
+            </style>
+            <style>
+                .caption {
+                    margin-top: 8px; /* Space between the video and its caption */
+                }
+            </style>
+
+            <div style="display: flex; justify-content: center;align-items: center; height: 80px;">
+                <h3 class="title is-4"> Comparison with SOTA</h3>
+            </div>
+
+            <div class="content has-text-justified">
+                <!-- <p style="font-size: 1.2em;">
+                    Our method can ensure the consistency of ID while generating long videos, and maintain the motion during the duration of videos.
+                </p> -->
+            </div>
+            <div class="video-item">
+                <div class="columns is-multiline is-centered">
+                    <div class="column is-one-thir">
+                        <video class="video-player" poster="" id="tree2" controls>
+                            <source src="content/comparison with SOTA/tiktok_002.mp4" type="video/mp4">
+                        </video>
+                        </p>
+                    </div>
+                    <div class="column is-one-thir">
+                        <video class="video-player" poster="" id="tree2" controls>
+                            <source src="content/comparison with SOTA/tiktok_005.mp4" type="video/mp4">
+                        </video>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <div class="columns is-multiline is-centered">
+                    <div class="column is-one-thir">
+                        <video class="video-player" poster="" id="tree2" controls>
+                            <source src="content/comparison with SOTA/cartoon_processed.mp4" type="video/mp4">
+                        </video>
+                        </p>
+                    </div>
+                    <div class="column is-one-thir">
+                        <video class="video-player" poster="" id="tree2" controls>
+                            <source src="content/comparison with SOTA/misaligned_processed.mp4" type="video/mp4">
+                        </video>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+  
+
+            <div style="display: flex; justify-content: center;align-items: center; height: 80px;">
+                <h3 class="title is-4" style="margin-bottom: 0;">Aligned Animation</h3>
+            </div>
+
+            <div class="video-item">
+                <div class="columns is-multiline is-centered">
+                    <div class="column is-one-thir">
+                        <video class="video-player" poster="" id="tree2" controls>
+                            <source src="content/aligned pose driven/vid5_concatenated.mp4" type="video/mp4">
+
+                        </video>
+                        </p>
+                    </div>
+                    <div class="column is-one-thir">
+                        <video class="video-player" poster="" id="tree2" controls>
+                            <source src="content/aligned pose driven/vid3_concatenated.mp4" type="video/mp4">
+                        </video>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-item">
+                <div class="columns is-multiline is-centered">
+                    <div class="column is-one-thir">
+                        <video class="video-player" poster="" id="tree2" controls>
+                            <source src="content/aligned pose driven/vid1_concatenated.mp4" type="video/mp4">
+                        </video>
+                        </p>
+                    </div>
+                    <div class="column is-one-thir">
+                        <video class="video-player" poster="" id="tree2" controls>
+                            <source src="content/aligned pose driven/vid4_from1.3b_concatenated.mp4" type="video/mp4">
+
+                        </video>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="video-item">
+                <div class="columns is-multiline is-centered">
+                    <div class="column is-one-thir">
+                        <video class="video-player" poster="" id="tree2" controls>
+                            <source src="content/aligned pose driven/vid2_concatenated_processed.mp4" type="video/mp4">
+
+                        </video>
+                        </p>
+                    </div>
+                    <div class="column is-one-thir">
+                        <video class="video-player" poster="" id="tree2" controls>
+                            <source src="content/aligned pose driven/vid6_pose_retarget_concatenated_processed.mp4" type="video/mp4">
+                        </video>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Different garments -->
+            <div style="display: flex; justify-content: center;align-items: center; height: 80px;">
+                <h3 class="title is-4"> Misaligned Animation</h3>
+            </div>
+            <style>
+                /* 整体容器 */
+                .video-comparison-section {
+                    margin: 0;
+                    padding: 20px 0;
+                }
+                
+                /* 每个video-item */
+                .video-item {
+                    margin: 10px 0 !important;
+                    padding: 0 !important;
+                }
+                
+                /* comparison-row */
+                .comparison-row {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 15px;
+                    margin: 0 !important;
+                    padding: 15px;
+                    background: #f8f9fa;
+                    border-radius: 15px;
+                }
+                
+                .comparison-item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                
+                .comparison-item img,
+                .comparison-item video {
+                    height: 400px;
+                    width: auto;
+                    object-fit: contain;
+                    border: 3px solid #e0e0e0;
+                    border-radius: 10px;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                }
+                
+                .comparison-label {
+                    margin-top: 10px;
+                    margin-bottom: 0;
+                    font-weight: 600;
+                    font-size: 16px;
+                    color: #2c3e50;
+                    text-align: center;
+                }
+                
+                .arrow {
+                    font-size: 48px;
+                    color: #3498db;
+                    font-weight: bold;
+                    margin: 0 10px;
+                }
+                </style>
+                
+                <!-- 用一个容器包裹所有video-item -->
+                <div class="video-comparison-section">
+                    <div class="video-item">
+                        <div class="comparison-row">
+                            <div class="comparison-item">
+                                <img src="content/misaligned pose driven/vid2_reference.png" alt="Reference">
+                                <div class="comparison-label">Reference</div>
+                            </div>
+                            <div class="arrow">→</div>
+                            <div class="comparison-item">
+                                <img src="content/misaligned pose driven/vid0_input.png" alt="Input">
+                                <div class="comparison-label">True Input</div>
+                            </div>
+                            <div class="arrow">→</div>
+                            <div class="comparison-item">
+                                <video class="video-player" controls>
+                                    <source src="content/misaligned pose driven/vid0_original_pose.mp4" type="video/mp4">
+                                </video>
+                                <div class="comparison-label">Output Video</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-item">
+                        <div class="comparison-row">
+                            <div class="comparison-item">
+                                <img src="content/misaligned pose driven/vid2_reference.png" alt="Reference">
+                                <div class="comparison-label">Reference</div>
+                            </div>
+                            <div class="arrow">→</div>
+                            <div class="comparison-item">
+                                <img src="content/misaligned pose driven/vid2_input.png" alt="Input">
+                                <div class="comparison-label">True Input</div>
+                            </div>
+                            <div class="arrow">→</div>
+                            <div class="comparison-item">
+                                <video class="video-player" controls>
+                                    <source src="content/misaligned pose driven/vid2.mp4" type="video/mp4">
+                                </video>
+                                <div class="comparison-label">Output Video</div>
+                            </div>
+                        </div>
+                    </div>
+                
+
+                    <div class="video-item">
+                        <div class="comparison-row">
+                            <div class="comparison-item">
+                                <img src="content/misaligned pose driven/vid1_reference.png" alt="Reference">
+                                <div class="comparison-label">Reference</div>
+                            </div>
+                            <div class="arrow">→</div>
+                            <div class="comparison-item">
+                                <img src="content/misaligned pose driven/vid1_input.png" alt="Input">
+                                <div class="comparison-label">True Input</div>
+                            </div>
+                            <div class="arrow">→</div>
+                            <div class="comparison-item">
+                                <video class="video-player" controls>
+                                    <source src="content/misaligned pose driven/vid1.mp4" type="video/mp4">
+                                </video>
+                                <div class="comparison-label">Output Video</div>
+                            </div>
+                        </div>
+                    </div>
+                
+        
+                    <div class="video-item">
+                        <div class="comparison-row">
+                            <div class="comparison-item">
+                                <img src="content/misaligned pose driven/vid3_reference.png" alt="Reference">
+                                <div class="comparison-label">Reference</div>
+                            </div>
+                            <div class="arrow">→</div>
+                            <div class="comparison-item">
+                                <img src="content/misaligned pose driven/vid3_input.png" alt="Input">
+                                <div class="comparison-label">True Input</div>
+                            </div>
+                            <div class="arrow">→</div>
+                            <div class="comparison-item">
+                                <video class="video-player" controls>
+                                    <source src="content/misaligned pose driven/vid3.mp4" type="video/mp4">
+                                </video>
+                                <div class="comparison-label">Output Video</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="video-item">
+                        <div class="comparison-row">
+                            <div class="comparison-item">
+                                <img src="content/misaligned pose driven/vid4_reference.jpg" alt="Reference">
+                                <div class="comparison-label">Reference</div>
+                            </div>
+                            <div class="arrow">→</div>
+                            <div class="comparison-item">
+                                <img src="content/misaligned pose driven/vid4_input.png" alt="Input">
+                                <div class="comparison-label">True Input</div>
+                            </div>
+                            <div class="arrow">→</div>
+                            <div class="comparison-item">
+                                <video class="video-player" controls>
+                                    <source src="content/misaligned pose driven/vid4.mp4" type="video/mp4">
+                                </video>
+                                <div class="comparison-label">Output Video</div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                
+                
+
+
+            <div style="display: flex; justify-content: center;align-items: center; height: 80px;">
+                <h3 class="title is-4" style="margin-bottom: 0;">Text Edits of Unseen Elements</h3>
+            </div>
+
+            <style>
+                .video-caption {
+                    text-align: center;
+                    margin-top: 15px;
+                    padding: 0 10px;
+                    font-size: 15px;
+                    color: #333;
+                    line-height: 1.6;
+                }
+                
+                .highlight-red {
+                    color: #e74c3c;
+                    font-weight: 600;
+                }
+                
+                .highlight-blue {
+                    color: #3498db;
+                    font-weight: 600;
+                }
+                
+                .highlight-orange {
+                    color: #e67e22;
+                    font-weight: 600;
+                }
+                </style>
+                
+                <div class="columns is-multiline is-centered">
+                    <div class="column is-one-third">
+                        <video class="video-player" poster="" id="video1" controls>
+                            <source src="content/misaligned pose driven/vid2.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-caption">
+                            a clown in a <span class="highlight-red">red suit</span> dancing joyfully on a street.
+                        </div>
+                    </div>
+                    
+                    <div class="column is-one-third">
+                        <video class="video-player" poster="" id="video2" controls>
+                            <source src="content/misaligned pose driven/vid2v3.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-caption">
+                            a clown in a <span class="highlight-red">red suit</span> and <span class="highlight-blue">blue pants</span> dancing joyfully on a street.
+                        </div>
+                    </div>
+                    
+                    <div class="column is-one-third">
+                        <video class="video-player" poster="" id="video3" controls>
+                            <source src="content/misaligned pose driven/vid2v2.mp4" type="video/mp4">
+                        </video>
+                        <div class="video-caption">
+                            a clown in a <span class="highlight-red">red suit</span> dancing joyfully on a street, <span class="highlight-orange">with a McDonald's sign visible in the background</span>.
+                        </div>
+                    </div>
+                </div>
+                
+
+
+            <br></br>
+        </div>
+    </div>
+</section>
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content" style="text-align: center;">
+                    <p>
+                        This project is intended solely for academic research and effect demonstration.
+                    </p>
+
+                    <p>
+                        This page was built using the <a
+                            href="https://github.com/eliahuhorwitz/Academic-project-page-template"
+                            target="_blank">Template</a> which was adopted from the <a href="https://nerfies.github.io"
+                                                                                       target="_blank">Nerfies</a> project
+                        page.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="static/js/script.js"></script>
+<script>
+    // 获取所有视频元素
+    var videos = document.querySelectorAll('video');
+
+    // 为每个视频添加播放事件监听器
+    videos.forEach(function (video) {
+        video.addEventListener('play', function () {
+            // 当任何一个视频开始播放时，暂停其他所有视频
+            videos.forEach(function (otherVideo) {
+                if (otherVideo !== video) {
+                    otherVideo.pause();
+                }
+            });
+        }, false);
+    });
+</script>
+
+<script>
+    new BeforeAfter({
+        id: '#example1'
+    });
+    new BeforeAfter({
+        id: '#example2'
+    });
+    new BeforeAfter({
+        id: '#example3'
+    });
+    new BeforeAfter({
+        id: '#example4'
+    });
+    new BeforeAfter({
+        id: '#example6'
+    });
+    new BeforeAfter({
+        id: '#example7'
+    });
+
+</script>
+
+<script>
+    var gifImage = document.getElementById('gifImage');
+    var isPaused = false;
+
+    gifImage.addEventListener('mouseenter', function () {
+        gifImage.src = gifImage.src;
+        isPaused = true;
+    });
+
+    gifImage.addEventListener('mouseleave', function () {
+        if (isPaused) {
+            gifImage.src = gifImage.src;
+            isPaused = false;
+        }
+    });
+</script>
+
+<script>
+    bulmaCarousel.attach('#results-carousel11', {
+        slidesToScroll: 1,
+        slidesToShow: 2,
+        infinite: true,
+        autoplay: false,
+    });
+    bulmaCarousel.attach('#results-carousel22', {
+        slidesToScroll: 1,
+        slidesToShow: 1,
+        infinite: true,
+        autoplay: false,
+    });
+    bulmaCarousel.attach('#results-carousel44', {
+        slidesToScroll: 1,
+        slidesToShow: 2,
+        infinite: false,
+        autoplay: false,
+    });
+</script>
+
+<script>
+    document.getElementById('gifImage3').src = 'content/gifs/Item.gif';
+    document.getElementById('gifImage1').src = 'content/gifs/s1.gif';
+    document.getElementById('gifImage2').src = 'content/gifs/s2.gif';
+
+    // 图片资源路径
+    const images = [
+        'content/teaser/t3.gif',
+        'content/teaser/t4.gif',
+        'content/teaser/t1.gif',
+        'content/teaser/t2.gif'
+    ];
+
+    // 获取要插入图片的div
+    const group1 = document.getElementById('group1');
+    const group2 = document.getElementById('group2');
+
+    // 创建并插入前两张图片
+    for (let i = 0; i < 2; i++) {
+        const img = document.createElement('img');
+        img.src = images[i];
+        img.loading = 'lazy';
+        img.alt = '图片' + (i + 1);
+        group1.appendChild(img);
+    }
+
+    // 创建并插入后两张图片
+    for (let i = 2; i < images.length; i++) {
+        const img = document.createElement('img');
+        img.src = images[i];
+        img.loading = 'lazy';
+        img.alt = '图片' + (i + 1);
+        group2.appendChild(img);
+    }
+
+</script>
+
+
+
+<!-- Default Statcounter code for One-to-All Animation
+https://humanaigc.github.io/One-to-All Animation -->
+<script type="text/javascript">
+var sc_project=13167665; 
+var sc_invisible=1; 
+var sc_security="001465d9"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics"
+href="https://statcounter.com/" target="_blank"><img
+class="statcounter"
+src="https://c.statcounter.com/13167665/0/001465d9/1/"
+alt="Web Analytics"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
+
+
+
+</body>
+
+
+</html>
