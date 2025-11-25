@@ -1,5 +1,5 @@
-# Wan-Animate
+# One-to-All Animation
 
-This repo hosts the project page for Wan-Animate. 
+This repo hosts the project page for One-to-All Animation. 
 
-Wan-Animate: Unified Character Animation and Replacement with Holistic Replication.
+One-to-All Animation: Alignment-Free Character Animation and Image Pose Transfer
