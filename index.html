@@ -289,6 +289,192 @@ Character Animation and Image Pose Transfer">
                 }
             </style>
 
+            <!-- =============== One-to-All Animation =============== -->
+            <div style="display:flex; justify-content:center; align-items:center; height:80px;">
+                <h3 class="title is-4">One to All Animation</h3>
+            </div>
+            
+            <div class="content has-text-centered">
+                <p style="font-size:1.2em;">
+                    A single reference image can be driven by arbitrary dance videos across different scales.
+                </p>
+            </div>
+            
+            <style>
+                /* 整体布局：每行固定 4 列 */
+                .columns {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin-bottom: 40px;
+                }
+                
+                /* 单项宽度保持一致 */
+                .column.is-one-quarter {
+                    width: 25%;
+                    padding: 10px;
+                    box-sizing: border-box;
+                }
+                
+                /* 卡片：保证两行高度统一 */
+                .card-box {
+                    height: 360px;                    /* 图片 + 视频高度一致 */
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                }
+                
+                /* 媒体容器：确保视频 & 图片尺寸统一 */
+                .media-pad {
+                    height: 310px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                }
+                
+                /* 统一媒体规则：保持比例、等高、居中 */
+                .media-pad img,
+                .media-pad video {
+                    height: 100%;                  /* 高度满出容器 */
+                    width: auto;                   /* 等比例缩放 */
+                    object-fit: contain;           /* 完整显示 */
+                    border-radius: 6px;
+                }
+                
+                /* 移动端响应式 */
+                @media (max-width: 900px) {
+                    .column.is-one-quarter {
+                        width: 50%;
+                    }
+                }
+                
+                @media (max-width: 600px) {
+                    .column.is-one-quarter {
+                        width: 100%;
+                    }
+                    .card-box {
+                        height: auto;
+                    }
+                    .media-pad {
+                        height: auto;
+                        min-height: 220px;
+                    }
+                }
+                </style>
+                
+                
+                
+                <!-- ------------- 第一组 ------------- -->
+                <div class="video-item">
+                  <div class="columns">
+                
+                    <!-- Reference -->
+                    <div class="column is-one-quarter">
+                      <div class="card-box">
+                        <p><strong>Reference</strong></p>
+                        <div class="media-pad">
+                          <img src="content/more_example14b/1.png">
+                        </div>
+                      </div>
+                    </div>
+                
+                    <!-- Motion 1 -->
+                    <div class="column is-one-quarter">
+                      <div class="card-box">
+                        <p><strong>Motion 1</strong></p>
+                        <div class="media-pad">
+                          <video controls muted loop>
+                            <source src="content/more_example14b/ref_1_motion1.mp4" type="video/mp4">
+                          </video>
+                        </div>
+                      </div>
+                    </div>
+                
+                    <!-- Motion 2 -->
+                    <div class="column is-one-quarter">
+                      <div class="card-box">
+                        <p><strong>Motion 2</strong></p>
+                        <div class="media-pad">
+                          <video controls muted loop>
+                            <source src="content/more_example14b/ref_1_motion2.mp4" type="video/mp4">
+                          </video>
+                        </div>
+                      </div>
+                    </div>
+                
+                    <!-- Motion 3 -->
+                    <div class="column is-one-quarter">
+                      <div class="card-box">
+                        <p><strong>Motion 3</strong></p>
+                        <div class="media-pad">
+                          <video controls muted loop>
+                            <source src="content/more_example14b/ref_1_motion3.mp4" type="video/mp4">
+                          </video>
+                        </div>
+                      </div>
+                    </div>
+                
+                  </div>
+                </div>
+                
+                
+                
+                <!-- ------------- 第二组 ------------- -->
+                <div class="video-item">
+                  <div class="columns">
+                
+                    <!-- Reference -->
+                    <div class="column is-one-quarter">
+                      <div class="card-box">
+                        <p><strong>Reference</strong></p>
+                        <div class="media-pad">
+                          <img src="content/more_example14b/2.png">
+                        </div>
+                      </div>
+                    </div>
+                
+                    <!-- Motion 1 -->
+                    <div class="column is-one-quarter">
+                      <div class="card-box">
+                        <p><strong>Motion 1</strong></p>
+                        <div class="media-pad">
+                          <video controls muted loop>
+                            <source src="content/more_example14b/ref_2_motion1.mp4" type="video/mp4">
+                          </video>
+                        </div>
+                      </div>
+                    </div>
+                
+                    <!-- Motion 2 -->
+                    <div class="column is-one-quarter">
+                      <div class="card-box">
+                        <p><strong>Motion 2</strong></p>
+                        <div class="media-pad">
+                          <video controls muted loop>
+                            <source src="content/more_example14b/ref_2_motion2.mp4" type="video/mp4">
+                          </video>
+                        </div>
+                      </div>
+                    </div>
+                
+                    <!-- Motion 3 -->
+                    <div class="column is-one-quarter">
+                      <div class="card-box">
+                        <p><strong>Motion 3</strong></p>
+                        <div class="media-pad">
+                          <video controls muted loop>
+                            <source src="content/more_example14b/ref_2_motion3.mp4" type="video/mp4">
+                          </video>
+                        </div>
+                      </div>
+                    </div>
+                
+                  </div>
+                </div>
+
             <div style="display: flex; justify-content: center;align-items: center; height: 80px;">
                 <h3 class="title is-4"> Comparison with SOTA</h3>
             </div>
